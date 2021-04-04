@@ -158,6 +158,7 @@ export default {
             this.start()
                 .then(camera => {
                     if(camera) {
+                        camera.setVideoConstraints({facingMode:'environment'});
                         camera.start();
                     }
                 })
